@@ -38,12 +38,25 @@ public void tester()
 public boolean palindrome(String word)
 {
   //your code here
+  String a = new String();
+  for(int i = 0; i < word.length(); i++){
+    if(Character.isLetter(word.charAt(i)))
+      a = a + word.charAt(i);
+  }
+  a = a.toLowerCase();
+  if(a.equals(reverse(word)))
+    return true;
   return false;
 }
 public String reverse(String str)
 {
     String sNew = new String();
     //your code here
+    for(int i = str.length()-1; i >= 0; i--){
+    if(Character.isLetter(str.charAt(i)))
+      sNew = sNew + str.charAt(i);
+    }
+    sNew = sNew.toLowerCase();
     return sNew;
 }
 }
